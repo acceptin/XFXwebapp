@@ -1,0 +1,243 @@
+.htbanner{
+	position: relative;
+}
+.zhifa-bar > img{max-width: 100%}
+.zhifa-bar-text{
+	position: absolute;
+	bottom:0;
+	left: 0;
+	>h1{
+		font-size: 1.3em;
+		font-weight: bold;
+	}
+	>p{
+		font-size: .9em;
+	}
+}
+// 技术
+.ht-src{
+	padding-top: 20px;
+	padding-bottom: 50px;
+	h2{
+		padding-bottom: 20px;
+	}
+	p{
+		font-size: 1.125em;
+		line-height: 1.8em;
+		text-indent: 2em;
+	}
+}
+.text-base{
+	color:@base-color;
+}
+.ht-technologe{
+	background: #f0f1f1 url(/static/zhifa/map.jpg) center center no-repeat;
+	padding:30px 0 0 0;
+	text-align: center;
+	.js{
+		margin-bottom: 40px;
+	}
+	h2{
+		padding-bottom: 30px;
+		font-weight: bold;
+	}
+	p{
+		font-size: 1.125em;
+		line-height: 1.8em;
+		text-indent: 2em;
+		text-align: left;
+	}
+	strong{
+		font-size: 1.8em;
+		color:@base-color;
+	}
+	img{
+		display: block;
+		margin: 20px auto;
+		max-width: 100%;
+	}
+}
+// 五星
+.five-server{
+	background-color: #e9e9e9;
+	padding: 50px 0;
+	ul{
+		padding-left: 0;
+		margin: 0 -10px;
+	}
+	.fbox{
+		background-color: #fff;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	li{
+		padding-left:10px;
+		padding-right:10px;
+		list-style: none;
+		float: left;
+		width: 50%;
+		overflow: hidden;
+	}
+	img{
+		display: block;
+		max-width: 100%;
+	}
+	.fsinfo{
+		font-size: 1.125em;
+		line-height: 1.5em;
+		margin-bottom: 50px;
+		em{
+			color: @base-color;
+			font-style: normal;
+		}
+	}
+}
+.fs-i{
+	padding: 10px;
+	font-size: 16px;
+	strong{
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: normal;
+	}
+}
+// 安全
+.zf-safe{
+	position: relative;
+	padding:30px 20px;
+	text-align: center;
+	h4{
+		display: inline-block;
+		background-color: #fff;
+		text-shadow:1px 1px 0 rgba(255, 255, 255, 1);
+		padding: 0 20px;
+	}
+	hr{
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #fff;
+		margin-top: -20px;
+
+	}
+	ul{
+		padding-left: 0;
+		margin-top: 60px;
+		.clearfix();
+	}
+	li{
+		float: left;
+		width: 33.3333333333%;
+		list-style: none;
+		line-height: 30px;
+		margin-bottom: 25px;
+		i{
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			-webkit-border-radius: 80px;
+			-moz-border-radius: 80px;
+			border-radius: 80px;
+			background-image: url(/static/zhifa/safe.png);
+			background-repeat: no-repeat;
+		}
+	}
+	.anesthesia{
+		background-position: -85px 0;
+		&:hover{background-position: -85px -85px;}
+
+	}
+	.medicinal{
+		background-position: 0 0;
+		&:hover{background-position: 0px -85px;}
+	}
+	.clean-env{
+		background-position: -255px 0;
+		&:hover{background-position: -255px -85px;}
+	}
+	.environment{
+		background-position: -170px 0;
+		&:hover{background-position: -170px -85px;}
+	}
+	.equipment{
+		background-position: -510px 0;
+		&:hover{background-position: -510px -85px;}
+	}
+	.physician{
+		background-position: -340px 0;
+		&:hover{background-position: -340px -85px;}
+	}
+	.postoperative{
+		background-position: -425px 0;
+		&:hover{background-position: -425px -85px;}
+	}
+}
+
+//签约
+.qianyue{
+	background: #f0f1f1 url(/static/zhifa/qianyue.jpg) center center no-repeat;
+	height: 383px;
+	.container{
+		padding-top: 150px;
+		padding-right: 100px
+	}
+	h3{
+		text-align: right;
+		font-size: 3em;
+		color: #fff;
+		text-shadow:0 0 15px rgb(0, 0, 0)
+	}
+	p{
+		text-align: right;
+		font-size: 1.6em;
+		color: #fff;
+		text-shadow:0 0 15px rgb(0, 0, 0)
+	}
+}
+.ht-ml{
+	padding: 50px 0;
+	font-size: 1.125em;
+	line-height: 1.8em;
+	h3{
+		color: @base-color;
+	}
+}
+
+// 项目
+.ht-prolist{
+	background-color: #f7f7f7;
+	padding-top: 30px;
+	h3{
+		margin-bottom: 30px;
+		color: @base-color;
+	}
+	.container{
+		position: relative;
+		//background: url(/static/zhifa/line.png) center center no-repeat;
+	}
+	.ht-item{
+		padding-left: 0;
+		li{
+			list-style: none;
+			//position: absolute;
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: 20px;
+			margin-top: 20px;
+			background-color: #fff;
+		}
+		p{
+			margin-top: 10px;
+			font-size: 14px;
+			line-height: 1.6em;
+			text-indent: 2em;
+			text-align: left;
+		}
+	}
+	.thrumn img{
+		max-width: 100%;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+}

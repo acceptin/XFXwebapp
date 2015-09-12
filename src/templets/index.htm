@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <title>{dede:global.cfg_webname/}</title>
+
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet"> 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+    {dede:include filename="head.htm"/}
+    <div class="full-screen">
+      <div class="swiper-container banner">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide banner-slide"><a href="/"><img src="/static/img/2015081801.jpg"></a></div>
+            <div class="swiper-slide banner-slide"><a href="/"><img src="/static/img/2015081802.jpg"></a></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination banner-pagination"></div>
+      </div>
+    </div>
+    <div class="full-screen">
+      <div class="swiper-container zhifa-item">
+          <div class="swiper-wrapper item-wrapper">
+              {dede:channel typeid='38'} 
+              <div class="swiper-slide item-slide"><a href="[field:typelink/]"><img src="/static/img/item[field:id runphp='yes']@me=@me-8;
+              [/field:id].jpg"><b>[field:typename/]</b></a></div>
+              {/dede:channel} 
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-scrollbar item-scrollbar"></div>
+      </div>
+    </div>
+    
+    <div class="full-screen container color-block">
+      <div class="row">
+        <div class="col-xs-6 video-home color-block-bg"><div class="video"><a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/video-home.jpg" alt="植发"></a></div></div>
+        <div class="col-xs-3 zhifa-home color-block-bg"><a href="/zhifa/"><img src="/static/img/green-block.gif" alt="植发"><span class="color-block-text zhifa">植发</span></a></div>
+        <div class="col-xs-3 tuofa-home color-block-bg"><a href="/tuofa/"><img src="/static/img/blue-green-block.gif" alt="脱发"><span class="color-block-text tuofa">脱发</span></a></div>
+        <div class="col-xs-6 route-home color-block-bg"><a href="/about/center/"><img src="/static/img/green-block-long.gif" alt="全国分院"><span class="route"><i class="fa fa-map fa-2x"></i><strong>全国分院</strong><br><b>广州、天津、南昌</b></span></a></div>
+      </div>
+    </div> <!-- /container -->
+    <div class="full-screen">
+      <div class="ad home-ad">
+        <div class="alert alert-dismissible fade in" role="alert">
+          <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> -->
+          <a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)" class="btn btn-warning btn-sm">立即咨询</a>
+          <img src="/static/img/home-ad-01.jpg" alt="新发现植发">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="full-screen container color-block">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="expert-home  color-block-bg"><a href="/about/team/"><img src="/static/img/blue-block.gif" alt="专家"><span class="color-block-text expert"><strong>专家</strong><br/>丰富的植发<br/>手术经验</span></a></div>
+          <div class="evn-home color-block-bg"><a href="/about/environment/"><img src="/static/img/green-block.gif" alt="环境"><span class="color-block-text evn"><strong>环境</strong><br/>带你走进<br/>新发现</span></a></div>
+        </div>
+        <div class="col-xs-9 anli-home color-block-bg"><a href="/anli/"><img src="/static/img/anli.jpg" alt="植发案例"></a>
+            <div class="anli-block">
+              植发案例
+              <a href="/anli/" class="btn btn-xs btn-warning">更多案例</a>
+            </div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+    
+
+    {dede:include filename="footer.htm"/}
+    <!-- <div class="foot" id="myModal" data-target=".bs-example-modal-sm" data-toggle="modal">
+      
+    </div>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          adfasdfasdfasdf
+        </div>
+      </div>
+    </div> -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- swiper -->
+    <script src="//cdn.bootcss.com/Swiper/3.1.0/js/swiper.jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/transition.js"></script>
+    <script src="/static/js/dropdown.js"></script>
+    <script src="/static/js/collapse.js"></script>
+    <script src="/static/js/modal.js"></script>
+    <script src="/static/js/tab.js"></script>
+    <script src="/static/js/alert.js"></script>
+    <!-- jasny-bootstrap -->
+    <script src="/static/js/offcanvas.js"></script>
+    <script src="/static/js/main.js"></script>
+  </body>
+  <script>
+    //焦点图
+    var swiper = new Swiper('.banner', {
+        pagination: '.banner-pagination',
+        paginationClickable: true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
+    });
+    //项目图
+    var itemSwiper = new Swiper('.zhifa-item', {
+        scrollbar: '.item-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 5,
+        spaceBetween: 10,
+        freeMode: true
+    });
+  </script>
+</html>

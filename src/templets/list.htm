@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <title>{dede:field.seotitle/}_{dede:global.cfg_indexname/}</title>
+
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet"> 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+    {dede:include filename="head.htm"/}
+
+    {dede:include filename="ad.htm"/}
+    <div class="full-screen">
+      <div class="swiper-container public-nav">
+        <div class="swiper-wrapper public-wrapper">
+          {dede:channel currentstyle='<div class="swiper-slide public-slide"><a href="~typelink~" class="action">~typename~</a></div>'} 
+          <div class="swiper-slide public-slide"><a href="[field:typelink/]">[field:typename/]</a></div>
+          {/dede:channel} 
+        </div>
+      </div>
+    </div>
+
+    <section class="list-body container full-screen">
+      <div class="list-head row">
+        {dede:type}<div class="list-imgthrumb col-xs-5">
+          <img src="/static/img/item[field:id /].jpg" alt="[field:typename/]"></div>{/dede:type}
+        <dl class="list-desc col-xs-7">
+          <dt>{dede:type}[field:typename/]{/dede:type}</dt>
+          <dd>
+            <p>{dede:field.content function='cn_substr(@me, 180)'/}...</p>
+            <a href="{dede:type}[field:id runphp='yes']$typenum = @me+8;@me='/plus/list.php?tid='.$typenum;[/field:id]{/dede:type}" class="btn btn-default btn-sm">&nbsp;项目案例&nbsp;</a>
+            &nbsp;
+            <a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)" class="btn btn-default btn-sm">&nbsp;免费咨询&nbsp;</a>
+          </dd>
+        </dl>
+      </div>
+
+      <ul class="list-article-list">
+      {dede:list  titlelen='30' infolen='250' pagesize='6'}
+        <li class="list-article">
+          <a href="[field:arcurl/]">
+            <h3>[field:title/]</h3>
+            <p>
+              [field:description/]...
+            </p>
+            <time datetime="[field:pubdate function='MyDate('Y-m-d',@me)'/]" pubdate>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
+          </a>
+        </li>
+        {/dede:list} 
+      </ul>
+
+      <div class="paging">
+        <ul class="pagination">
+          {dede:pagelist listsize='6' listitem='index pre pageno next end'/} 
+        </ul>
+      </div>
+
+    </section>
+
+    {dede:include filename="footer.htm"/}
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- swiper -->
+    <script src="//cdn.bootcss.com/Swiper/3.1.0/js/swiper.jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/transition.js"></script>
+    <script src="/static/js/dropdown.js"></script>
+    <script src="/static/js/collapse.js"></script>
+    <script src="/static/js/modal.js"></script>
+    <script src="/static/js/tab.js"></script>
+    <script src="/static/js/alert.js"></script>
+    <!-- jasny-bootstrap -->
+    <script src="/static/js/offcanvas.js"></script>
+    <script src="/static/js/main.js"></script>
+  </body>
+  <script>
+    var swiper = new Swiper('.public-nav', {
+        spaceBetween : 15,
+        loop : true,
+        slidesPerView : 'auto',
+        loopedSlides :8
+    });
+  </script>
+</html>
