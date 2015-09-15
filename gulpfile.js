@@ -23,7 +23,7 @@ var imgSrc = './src/img/**/*',                          //图片路径
     imgDst = './dist/img',
     fontSrc = './bower_components/font-awesome/fonts/*',//字体路径
     fontDst = './dist/fonts/',
-    jsSrc = './src/js/**/*.js',                         //js路径
+    jsSrc = ['./src/js/*.js','./src/js/vendor/*.js'],   //js路径
     jsDst = './dist/js',
     htmlSrc = './src/*.html',                           //html路径
     htmlDst = './dist/',
@@ -74,19 +74,22 @@ gulp.task('css', function () {
 });
 
 // 图片处理
-gulp.task('images', function(){
+gulp.task('images', ['clean-img'], function(){
     gulp.src(imgSrc)
         .pipe(imagemin())
         .pipe(livereload(server))
         .pipe(gulp.dest(imgDst));
 })
 
-// js处理
-gulp.task('js', function () {
-    //将bower的库文件对应到指定位置
-    gulp.src(libSrc)
-      .pipe(gulp.dest(libDst));
+//清理模版
+gulp.task('clean-img', function () {
+  return gulp.src('./dist/img', {read: false})
+    .pipe(clean());
+});
 
+// js处理
+gulp.task('js', ['movie-js'] ,  function () {
+    
     gulp.src(jsSrc)
         //.pipe(jshint('.jshintrc'))
         //.pipe(jshint.reporter('default'))
@@ -96,6 +99,18 @@ gulp.task('js', function () {
         .pipe(uglify())
         .pipe(livereload(server))
         .pipe(gulp.dest(jsDst));
+});
+
+//将bower的库文件对应到指定位置
+gulp.task('movie-js', ['clean-js'] ,  function () {
+    return gulp.src(libSrc)
+        .pipe(gulp.dest(libDst));
+});
+
+//清理js
+gulp.task('clean-js', function () {
+    return gulp.src(['./dist/js','./src/js/vendor'], {read: false})
+        .pipe(clean());
 });
 
 // 模版文件HTML处理
@@ -138,12 +153,12 @@ gulp.task('watch',function(){
         })
 
         // 监听css
-        gulp.watch('./src/less/*.less', function(){
+        gulp.watch('./src/less/**/*.less', function(){
             gulp.run('css');
         });
 
         // 监听images
-        gulp.watch('./src/img/**/*', function(){
+        gulp.watch('./src/img/*', function(){
             gulp.run('images');
         });
 
