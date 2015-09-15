@@ -34,16 +34,10 @@
       <a href="/about/environment/camera360.html" class="btn btn-warning btn-sm">看图片不过瘾，直接看全景！</a>
     </div>
     <section class="env-body full-screen">
-      <div class="swiper-container env-img">
-        <div class="swiper-wrapper env-wrapper">
-            <div class="swiper-slide env-slide"><img src="/static/img/evn_01.jpg" alt=""><b>VIP室</b></div>
-            <div class="swiper-slide env-slide"><img src="/static/img/evn_02.jpg" alt=""><b>手术室</b></div>
-            <div class="swiper-slide env-slide"><img src="/static/img/evn_03.jpg" alt=""><b>会议室</b></div>
-            <div class="swiper-slide env-slide"><img src="/static/img/evn_04.jpg" alt=""><b>前台</b></div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination item-scrollbar"></div>
-      </div>
+        <div class="env-slide"><img src="/static/img/evn_01.jpg" alt=""><b>VIP室</b></div>
+        <div class="env-slide"><img src="/static/img/evn_02.jpg" alt=""><b>手术室</b></div>
+        <div class="env-slide"><img src="/static/img/evn_03.jpg" alt=""><b>会议室</b></div>
+        <div class="env-slide"><img src="/static/img/evn_04.jpg" alt=""><b>前台</b></div>
     </section>
 
     {dede:include filename="footer.htm"/}
@@ -57,11 +51,6 @@
         slidesPerView: 4,
         spaceBetween: 0,
         freeMode: true
-    });
-    var evn = new Swiper('.env-img', {
-      pagination : '.swiper-pagination',
-      autoplay: 5000,
-      effect : 'fade'
     });
   </script>
 </html>

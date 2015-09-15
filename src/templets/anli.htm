@@ -28,6 +28,18 @@
     </div>
 
     <section class="anli-body container full-screen">
+      <div class="list-head row">
+        {dede:type}<div class="list-imgthrumb col-xs-5">
+          <img src="/static/img/item[field:id runphp='yes']@me=@me-8;[/field:id].jpg" alt="[field:typename/]"></div>{/dede:type}
+        <dl class="list-desc col-xs-7">
+          <dt>{dede:type}[field:typename/]{/dede:type}</dt>
+          <dd>
+            <p>{dede:field.content function='cn_substr(@me, 180)'/}...</p>
+            &nbsp;
+            <a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)" class="btn btn-default btn-sm">&nbsp;免费咨询&nbsp;</a>
+          </dd>
+        </dl>
+      </div>
       <ul class="row">
         {dede:list  pagesize='6' channelid='14' addfields='name,anliafter,anlibefore,technology'}
         <li class="col-xs-6">
