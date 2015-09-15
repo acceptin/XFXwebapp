@@ -4503,12 +4503,15 @@ footer > .container {
   border-radius: 5px;
   border: 1px solid #f0f0f0;
 }
-.list-article > h3 {
+.list-article > a:hover {
+  text-decoration: none;
+}
+.list-article h3 {
   font-size: 1.3em;
   margin-top: 5px;
   color: #666666;
 }
-.list-article > time {
+.list-article time {
   color: #3faf02;
 }
 .list-article p {
@@ -5127,6 +5130,9 @@ footer > .container {
 .team-head > p {
   color: #999;
   line-height: 1.3em;
+}
+.team-head > p > img {
+  width: 100%;
 }
 .team-body {
   background-color: #fafafa;

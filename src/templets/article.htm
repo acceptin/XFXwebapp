@@ -20,7 +20,7 @@
 
     <article class="container article full-screen">
         <h1>{dede:field.title/}</h1>
-        <p class="article-label">发布 <time datetime="{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}" pubdate>{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</time> 分类：{dede:type}[field:typename/]{/dede:type}</p>
+        <p class="article-label">发布 <time datetime="{dede:arclist}[field:pubdate function='MyDate('Y-m-d',@me)'/]{/dede:arclist}">{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</time> 分类：{dede:type}[field:typename/]{/dede:type}</p>
         <div class="artile-body">
           {dede:field.body/}
           <ul class="pager">{dede:pagebreak/}</ul>
