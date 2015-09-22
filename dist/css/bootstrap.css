@@ -4135,16 +4135,12 @@ body {
 }
 .route-home .route {
   padding-left: 55px;
-  vertical-align: middle;
   position: absolute;
   top: 50%;
   left: 0;
   margin-top: -15px;
   color: #fff;
-}
-.route-home .fa {
-  margin-left: -40px;
-  float: left;
+  text-align: center;
 }
 .route-home b {
   font-size: .8em;
