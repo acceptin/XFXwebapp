@@ -19,7 +19,7 @@ $('.navbar-offcanvas').on('show.bs.offcanvas', function () {
     $('#menu-trigger').removeClass('is-clicked');
     $('.modal').modal('hide');
   })
-document.writeln("<script language=\"javascript\" src=\"http://testserver.shifind.com/JS/LsJS.aspx?siteid=LTX79308962&lng=cn\"></script>");
+document.writeln("<script language=\"javascript\" src=\"http://testserver.shifind.com/JS/LsJS.aspx?siteid=LTX79308962\"></script>");
 function swt_hm(obj){
 var swt="http://testserver.shifind.com/LR/Chatpre.aspx?id=LTX79308962";
 window.open(swt);
