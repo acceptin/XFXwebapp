@@ -12,14 +12,21 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/favicon.ico">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- swiper -->
+    <script src="//cdn.bootcss.com/Swiper/3.1.0/js/swiper.jquery.min.js"></script>
+    <script src="/static/js/main.min.js"></script>
   </head>
   <body>
     {dede:include filename="head.htm"/}
     <div class="full-screen">
       <div class="swiper-container banner">
         <div class="swiper-wrapper ">
-            <div class="swiper-slide banner-slide"><a href="/"><img src="/static/img/2015081801.jpg"></a></div>
-            <div class="swiper-slide banner-slide"><a href="/"><img src="/static/img/2015081802.jpg"></a></div>
+            <div class="swiper-slide banner-slide"><a href="/about/"><img src="/static/img/2015081802.jpg"></a></div>
+            <div class="swiper-slide banner-slide"><a href="/anli/"><img src="/static/img/2015081801.jpg"></a></div>
+            <div class="swiper-slide banner-slide"><a  target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/home-ban03.jpg"></a></div>
+            <div class="swiper-slide banner-slide"><a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/home-ban04.jpg"></a></div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination banner-pagination"></div>
@@ -40,10 +47,20 @@
     
     <div class="full-screen container color-block">
       <div class="row">
-        <div class="col-xs-6 video-home color-block-bg"><div class="video"><a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/video-home.jpg" alt="植发"></a></div></div>
+        <div class="col-xs-6 video-home color-block-bg">
+          <!-- <div class="video"><a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/video-home.jpg" alt="植发"></a></div> -->
+          <div class="swiper-container video">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide banner-slide"><a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/yuyue-home-01.jpg"></a></div>
+                <div class="swiper-slide banner-slide"><a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/yuyue-home-02.jpg"></a></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination video-pagination"></div>
+          </div>
+        </div>
         <div class="col-xs-3 zhifa-home color-block-bg"><a href="/zhifa/"><img src="/static/img/green-block.gif" alt="植发"><span class="color-block-text zhifa">植发</span></a></div>
         <div class="col-xs-3 tuofa-home color-block-bg"><a href="/tuofa/"><img src="/static/img/blue-green-block.gif" alt="脱发"><span class="color-block-text tuofa">脱发</span></a></div>
-        <div class="col-xs-6 route-home color-block-bg"><a href="/about/environment/camera360.html"><img src="/static/img/green-block-long.gif" alt="医院全景"><span class="route"><i class="fa fa-map fa-2x"></i><strong>医院全景</strong><br><b>带你走进新发现植发</b></span></a></div>
+        <div class="col-xs-6 route-home color-block-bg"><a href="/about/environment/camera360.html"><img src="/static/img/green-block-long.gif" alt="医院全景"><span class="route"><!-- <i class="fa fa-map fa-2x"></i> --><strong>医院全景</strong><br><b>带你走进新发现植发</b></span></a></div>
       </div>
     </div> <!-- /container -->
     <div class="full-screen">
@@ -72,17 +89,19 @@
     </div> <!-- /container -->
     
     {dede:include filename="footer.htm"/}
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- swiper -->
-    <script src="//cdn.bootcss.com/Swiper/3.1.0/js/swiper.jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/static/js/main.min.js"></script>
   </body>
   <script>
     //焦点图
     var swiper = new Swiper('.banner', {
         pagination: '.banner-pagination',
+        paginationClickable: true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
+    });
+
+    var swiper = new Swiper('.video', {
+        pagination: '.video-pagination',
         paginationClickable: true,
         autoplay: 3000,
         autoplayDisableOnInteraction: false

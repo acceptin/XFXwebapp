@@ -4110,6 +4110,10 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
+.video > .video-pagination {
+  bottom: 0;
+  text-align: right;
+}
 .anli-home img {
   opacity: 0.8;
   filter: alpha(opacity=80);
