@@ -1,273 +1,233 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
-    <meta name="keywords" content="{dede:field name='keywords'/}" />
-    <title>{dede:field.seotitle/}_{dede:global.cfg_indexname/}</title>
-    <link href="/static/css/xfx.min.css" rel="stylesheet"> 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/favicon.ico">
-  </head>
-  <body>
-    {dede:include filename="head.htm"/}
-
-    {dede:include filename="ad.htm"/}
-    <div class="swiper-container public-nav">
-        <div class="swiper-wrapper public-wrapper">
-            {dede:channel currentstyle='<div class="swiper-slide public-slide"><a href="~typelink~" class="action">~typename~</a></div>'} 
-            <div class="swiper-slide public-slide"><a href="[field:typelink/]">[field:typename/]</a></div>
-            {/dede:channel} 
-        </div>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}">
+  <meta name="keywords" content="{dede:field name='keywords'/}">
+  <title>{dede:field.seotitle/}_{dede:global.cfg_indexname/}</title>
+  <link href="/static/css/xfx.min.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.ico"></head>
+<body>
+  {dede:include filename="head.htm"/}
+  <div class="tuofa-topics">
+    <div class="tf-top">
+      <img src="/static/tuofa/banner.jpg" alt="脱发">
+      <img src="/static/tuofa/tf-sj.jpg" alt="脱发危害">
+      <img src="/static/tuofa/tf-sjb.jpg" alt="脱发全国数据">
+      <img src="/static/tuofa/tf-sjl.jpg" alt="脱发人群比例">
+      <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)">
+        <img src="/static/tuofa/tf-p1zx.jpg" alt="新发现植发"></a>
     </div>
-    <div class="tuofa-bar"><img src="/static/tuofa/banner.jpg" alt="植发"></div>
-    <div class="container tf-asrc">
-        <h2>脱发的根本原因在于毛囊的萎缩、坏死！</h2>
-        <p>脱发发友们，在你寻求生发方法的时候，你是否被皮脂分泌过度、毛囊堵塞、男性激素分泌过旺、肾虚、精神紧张等原因所迷惑。不管原因有多少，100%的脱发、断发、头发稀疏患者都会出现毛囊不同程度的萎缩、坏死，这是所有脱发者唯一的共同点，因此毛囊坏死的区域就不会再生出头发来，直至形成秃顶，所以毛囊的坏死是脱发最基本的原因。</p>
-        <div class="srcimg"><img src="/static/tuofa/tuoxs.jpg" alt="脱发"></div>
-        <h3>头发出现以下状况必须警惕！</h3>
-        <ul class="tf-zk">
-            <li><em>1.</em>头油头屑</li>
-            <li><em>2.</em>发迹后移</li>
-            <li><em>3.</em>只脱不长</li>
-            <li><em>4.</em>头顶稀疏</li>
+    <div class="tf-yuanyin">
+      <div class="tf-title">
+        <img src="/static/tuofa/tf-title01.jpg" alt="找出脱发原因"></div>
+      <ul class="tf-yy-con">
+        <li>
+          <img src="/static/tuofa/tf-yuan01.jpg" alt="遗传因素">
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="btn btn-md btn-warning">我是这个原因，咨询专家</a>
+        </li>
+        <li>
+          <img src="/static/tuofa/tf-yuan02.jpg" alt="烫发">
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="btn btn-md btn-warning">我是这个原因，咨询专家</a>
+        </li>
+        <li>
+          <img src="/static/tuofa/tf-yuan03.jpg" alt="药物">
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="btn btn-md btn-warning">我是这个原因，咨询专家</a>
+        </li>
+        <li>
+          <img src="/static/tuofa/tf-yuan04.jpg" alt="精神或身体的因素">
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="btn btn-md btn-warning">我是这个原因，咨询专家</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tf-lx">
+      <div class="tf-title">
+        <img src="/static/tuofa/tf-title02.jpg" alt="脱发类型"></div>
+      <ul class="tf-lx-ls">
+        <li class="lx-list">
+          <img src="/static/tuofa/tf-lx01.jpg" alt="前额脱发">
+          <p>
+            前额脱发
+            <br> <b>6000例</b>
+          </p>
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="lx-zxbtn">
+            <img src="/static/tuofa/zxbtn.jpg" alt="新发现植发"></a>
+        </li>
+        <li class="lx-list">
+          <img src="/static/tuofa/tf-lx02.jpg" alt="头顶脱发">
+          <p>
+            头顶脱发
+            <br> <b>7165例</b>
+          </p>
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="lx-zxbtn">
+            <img src="/static/tuofa/zxbtn.jpg" alt="新发现植发"></a>
+        </li>
+        <li class="lx-list">
+          <img src="/static/tuofa/tf-lx03.jpg" alt="遗传性脱发">
+          <p>
+            遗传性脱发
+            <br>
+            <b>4532例</b>
+          </p>
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="lx-zxbtn">
+            <img src="/static/tuofa/zxbtn.jpg" alt="新发现植发"></a>
+        </li>
+        <li class="lx-list">
+          <img src="/static/tuofa/tf-lx04.jpg" alt="脂溢性脱发">
+          <p>
+            脂溢性脱发
+            <br>
+            <b>6355例</b>
+          </p>
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="lx-zxbtn">
+            <img src="/static/tuofa/zxbtn.jpg" alt="新发现植发"></a>
+        </li>
+        <li class="lx-list">
+          <img src="/static/tuofa/tf-lx05.jpg" alt="女性脱发">
+          <p>
+            女性脱发
+            <br>
+            <b>2378例</b>
+          </p>
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="lx-zxbtn">
+            <img src="/static/tuofa/zxbtn.jpg" alt="新发现植发"></a>
+        </li>
+        <li>
+          <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="tf">
+            <img src="/static/tuofa/tf-lx06.jpg" alt="新发现植发"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="tf-old">
+      <div class="tf-title">
+        <img src="/static/tuofa/tf-title03.jpg" alt="治疗脱发坑爹方法"></div>
+      <div class="tf-row">
+        <div class="tf-box">
+          <h4>吃药</h4>
+          <p>
+            <img src="/static/tuofa/tf-err01.jpg" alt="吃药">为了图方便轻信广告，买药就吃，但药不对症，不能消除病因，起不到治疗作用，反而拖延了治疗时机。</p>
+        </div>
+        <div class="tf-box">
+          <h4>生发水</h4>
+          <p>
+            <img src="/static/tuofa/tf-err02.jpg" alt="生发水">很多患者都想通过"一方多治"的办法，使用生发产品，想在家就能够治疗脱发，结果是越治越脱。</p>
+        </div>
+      </div>
+      <div class="tf-row">
+        <div class="tf-box">
+          <h4>保健品补肾</h4>
+          <p>
+            <img src="/static/tuofa/tf-err03.jpg" alt="保健品补肾">很多人认为脱发是因为肾不好，补肾就能治脱发，走入困境。脱发与肾无关，补肾治不了脱发！</p>
+        </div>
+        <div class="tf-box">
+          <h4>偏方</h4>
+          <p>
+            <img src="/static/tuofa/tf-err04.jpg" alt="偏方">民间流传偏方效果，轻信就诊，长期不见效果。偏方治脱发，以讹传讹！冒险！</p>
+        </div>
+      </div>
+      <div class="tf-zxbtn">
+        <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="btn btn-md btn-warning">什么方法治疗脱发靠谱？问问新发现植发专家</a>
+      </div>
+    </div>
+    <div class="tf-zhifa">
+      <div class="tf-title">
+        <img src="/static/tuofa/tf-title04.jpg" alt="植发">
+        <img src="/static/tuofa/tf-zhfa.jpg" alt="植发"></div>
+      <div class="tf-zf-con">
+        <img src="/static/tuofa/tf-ff01.jpg" alt="毛囊检测">
+        <img src="/static/tuofa/tf-ff02.jpg" alt="术后养发护理"></div>
+      <div class="tf-zxbtn">
+        <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="btn btn-md btn-warning">在线免费咨询专业治疗脱发</a>
+      </div>
+    </div>
+    <div class="tf-expert">
+      <div class="tf-title">
+        <img src="/static/tuofa/tf-title05.jpg" alt="毛发移植权威代表"></div>
+      <div class="tf-row">
+        <img src="/static/tuofa/tf-ex.jpg" alt="丘会华"></div>
+      <div class="tf-zxbtn" v>
+        <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="btn btn-md btn-warning">什么方法治疗脱发靠谱？问问新发现植发专家</a>
+      </div>
+    </div>
+    <div class="tf-title">
+      <img src="/static/tuofa/tf-title06.jpg" alt="脱发"></div>
+    <div class="tf-anli">
+      <ul>
+        <li>
+          <p>
+            <img src="/static/tuofa/anli01.jpg" alt="疤痕植发"></p>
+          <h4>疤痕植发&nbsp;&nbsp;9个月</h4>
+        </li>
+        <li>
+          <p>
+            <img src="/static/tuofa/anli02.jpg" alt="额角植发"></p>
+          <h4>额角植发&nbsp;&nbsp;10个月</h4>
+        </li>
+        <li>
+          <p>
+            <img src="/static/tuofa/anli03.jpg" alt="前额植发"></p>
+          <h4>前额植发&nbsp;&nbsp;9个月</h4>
+        </li>
+        <li>
+          <p>
+            <img src="/static/tuofa/anli04.jpg" alt="稀疏加密"></p>
+          <h4>稀疏加密&nbsp;&nbsp;9个月</h4>
+        </li>
+        <li>
+          <p>
+            <img src="/static/tuofa/anli05.jpg" alt="稀疏加密"></p>
+          <h4>稀疏加密&nbsp;&nbsp;1年</h4>
+        </li>
+      </ul>
+    </div>
+    <div class="tf-promise">
+      <div class="tf-title">
+        <img src="/static/tuofa/tf-title07.jpg" alt="脱发"></div>
+      <div class="banner">
+        <img src="/static/tuofa/tf-yy.jpg" alt="脱发"></div>
+      <div class="tf-prom-con">
+        <ul class="tf-row">
+          <li>
+            <img src="/static/tuofa/tf-yy01.jpg" alt="医学消毒"></li>
+          <li>
+            <img src="/static/tuofa/tf-yy02.jpg" alt="全程可视化"></li>
+          <li>
+            <img src="/static/tuofa/tf-yy03.jpg" alt="层流手术室"></li>
+          <li>
+            <img src="/static/tuofa/tf-yy04.jpg" alt="分离显微镜"></li>
+          <li>
+            <img src="/static/tuofa/tf-yy05.jpg" alt="种植显微镊"></li>
+          <li class="prom-bl">
+            <img src="/static/tuofa/tf-yy11.jpg" alt="脱发"></li>
         </ul>
-    </div>
-    <div class="container tf-part1">
-        <div class="tf-title1"></div>
-        <div class="symptoms">
-            <div class="tf-st tft">
-              <i></i>脱发常见症状<br><em>Common symptoms</em>
-            </div>
-            <div class="tf-tab">
-              <!-- Nav tabs -->
-              <ul class="tf-cs tablist" role="tablist">
-                <li role="presentation" class="active"><a href="#csOne" role="tab" data-toggle="tab">前额头发渐少</a></li>
-                <li role="presentation"><a href="#csTwo" role="tab" data-toggle="tab">发际线后移</a></li>
-                <li role="presentation"><a href="#csThree" role="tab" data-toggle="tab">头屑较多</a></li>
-                <li role="presentation"><a href="#csFour" role="tab" data-toggle="tab">头皮油腻潮湿</a></li>
-                <li role="presentation"><a href="#csFive" role="tab" data-toggle="tab">前额小绒毛不长</a></li>
-                <li role="presentation"><a href="#csSix" role="tab" data-toggle="tab">头顶稀疏见头皮</a></li>
-                <li role="presentation"><a href="#csSeven" role="tab" data-toggle="tab">内分泌失调</a></li>
-                <li role="presentation"><a href="#csEight" role="tab" data-toggle="tab">块状片状脱发</a></li>
-              </ul>
-
-              <!-- Tab panes -->
-              <div class="tab-content tf-part2">
-                <div role="tabpanel" class="tab-pane active" id="csOne">
-                  <h4>前额头发渐少:</h4>
-                  <p>由于人们前额的头发会受到雄性激素刺激，人们前额细胞质中有5α-还原酶，会和睾酮变为荷尔蒙作用增强5倍的DHT(双氢睾酮),DHT是男性型脱发的真正元凶，可对毛囊产生毒性作用，使毛囊逐渐萎缩，导致毛发的生长周期缩短，从而引发男性型脱发的进程，这样就导致了前额头发渐渐变少一些。</p>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="csTwo">
-                  <h4>发际线后移:</h4>
-                  <p>发际线部位的毛囊对于DHT的抵抗力很差，大量的雄性荷尔蒙转换成了的DHT对这些毛囊的强大破坏力，导致了头发，发际线越来越往后移。</p>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="csThree">
-                  <h4>头屑较多:</h4>
-                  <p>脂溢性皮炎会引起头屑变多，头发比较的油腻一些，如果不采取恰当的方法针对性的治疗，该病可能会周期性、复发性或持续性的发生，严重时可导致头皮毛囊损伤，形成永久性脱发。</p>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="csFour">
-                  <h4>头皮油腻潮湿:</h4>
-                  <p>这是脂溢性脱发的一种表现方式，在高温的情况下，几天不洗就有异味，而且潮湿很容易滋生细菌，感染而引起的脂溢性皮炎，导致头发开始慢慢出现脱落的情况。</p>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="csFive">
-                  <h4>前额小绒毛不长:</h4>
-                  <p>随着毛囊受到DHT的影响，毛囊受损，开始慢慢的出现萎缩的情况，前额出现小绒毛，如果前额小绒毛不长的话，那么毛囊可能已经萎缩了。</p>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="csSix">
-                  <h4>头顶稀疏见头皮:</h4>
-                  <p>因为一些毛囊对于DHT，也就是双氢睾酮的抵抗力比较弱一些，导致头发毛囊萎缩，头发的生长期缩短和头发变稀疏，严重的话还能够见到头皮。</p>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="csSeven">
-                  <h4>内分泌失调:</h4>
-                  <p>毛发生长受多种内分泌激素的影响，所以当发生内分泌异常时多引起脱发疾病，如产后、更年期脱发。块状片状脱发这是斑秃，斑秃是以头皮突然出现圆形、椭圆形脱发为特征。一块一块皮肤的脱发，互相之间又不相融合。一般多发生于头皮，但也可发生在其他部位，如眉毛、胡须等处。</p>
-                </div>
-              </div>
-            </div>
-            <div class="causes">
-              <div class="tf-co tft">
-                <i></i>脱发原因<br><em>Causes of hair loss</em>
-              </div>
-              <div class="tf-tab">
-                <!-- Nav tabs -->
-                <ul class="tablist" role="tablist">
-                  <li role="presentation" class="active"><a href="#coOne" role="tab" data-toggle="tab">精神性脱发</a></li>
-                  <li role="presentation"><a href="#coTwo" role="tab" data-toggle="tab">雄性激素源性脱发</a></li>
-                  <li role="presentation"><a href="#coThree" role="tab" data-toggle="tab">斑秃</a></li>
-                  <li role="presentation"><a href="#coFour" role="tab" data-toggle="tab">物理性脱发</a></li>
-                  <li role="presentation"><a href="#coFive" role="tab" data-toggle="tab">化学性脱发</a></li>
-                  <li role="presentation"><a href="#coSix" role="tab" data-toggle="tab">症状性脱发</a></li>
-                  <li role="presentation"><a href="#coSeven" role="tab" data-toggle="tab">营养代谢性脱发</a></li>
-                  <li role="presentation"><a href="#coEight" role="tab" data-toggle="tab">感染性脱发</a></li>
-                  <li role="presentation"><a href="#coNine" role="tab" data-toggle="tab">内分泌失调性脱发</a></li>
-                  <li role="presentation"><a href="#coTen" role="tab" data-toggle="tab">脂溢性脱发</a></li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content tf-part2">
-                  <div role="tabpanel" class="tab-pane active" id="coOne">
-                    <h4>精神性脱发:</h4>
-                    <p>精神性脱发是因精神压力过度导致的脱发。精神压力过大，头皮立毛肌收缩，为毛囊输送营养成分的毛细血管收缩，造成局部血液循环障碍，由此造成头发生态改变和营养不良。精神压力还可引起出汗过多和皮脂腺分泌过多，产生头垢，降低头发生存的环境质量，从而导致脱发。精神性脱发是暂时性脱发，经过改善精神状…</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coTwo">
-                    <h4>雄性激素源性脱发:</h4>
-                    <p>也称早秃，俗称“谢顶”。发生原因与遗传和雄性激素有关，属于永久性脱发。以前额及头顶部渐进性脱发为特征，多见于从事脑力劳动的男性，常在20-30岁左右开始出现脱发。脱发一般从前额及颞部两侧开始，前发际线逐渐后退，前额变高，随着年龄增大，头顶部头发逐渐稀疏甚至暴露头皮，而后枕部及两侧发际处仍常有…</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coThree">
-                    <h4>斑秃:</h4>
-                    <p>前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coFour">
-                    <h4>物理性脱发:</h4>
-                    <p>前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少前额头发渐少</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coFive">
-                    <h4>化学性脱发:</h4>
-                    <p>肿瘤病人接受抗癌药物治疗，长期使用某些化学制剂如常用的庆大霉素、别嘌呤醇、甲亢平、硫尿嘧啶、三甲双酮、普萘洛尔(心得安)、苯妥英钠、阿司匹林、消炎痛、避孕药等常引起脱发。烫发剂、洁发剂、染发剂等美发化妆品也是引起脱发的常见原因。近几年来，妇女头发变稀疏的发生率不断增多…</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coSix">
-                    <h4>症状性脱发:</h4>
-                    <p>贫血、肝肾病、营养不良、系统性红斑狼疮、干燥综合征、黑棘皮病，以及发热性疾病如肠伤寒、肺炎、脑膜炎、流行性感冒等往往可导致脱发，造成头发稀疏，这种脱发就叫症状性脱发。…</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coSeven">
-                    <h4>营养代谢性脱发:</h4>
-                    <p>食糖或食盐过量、蛋白质缺乏、缺铁缺锌、过量的硒等，以及某些代谢性疾病如精氨基琥珀酸尿症、高胱氨酸尿症、遗传性乳清酸尿症、甲硫氨酸代谢紊乱等，也是头发脱落的原因。…</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coEight">
-                    <h4>感染性脱发:</h4>
-                    <p>由于真菌感染、寄生虫、病毒及化脓性皮肤病等因素而造成的脱发称为感染性脱发。头部水痘、带状疱疹病毒、人类免疫缺陷病毒(HIV)、麻风杆菌、结核杆菌、梅毒苍白螺旋体，以及各种真菌引起的头癣均可引起脱发；局部皮肤病变如溢脂性皮肤炎、扁平苔藓、感染霉菌或寄生虫等也会造成脱发。…</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coNine">
-                    <h4>内分泌失调性脱发:</h4>
-                    <p>由于内分沁腺体机能异常而造成体内激素失调而导致的脱发称为内分泌失调性脱发。产后、更年期、口服避孕药等情况，在一定时期内会造成雌激素不足而脱发；甲状腺功能低下或者亢进、垂体功能减退、甲状旁腺功能减退、肾上腺肿瘤、肢端肥大症晚期等，均可导致头发的脱落。…</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="coTen">
-                    <h4>脂溢性脱发:</h4>
-                    <p>是在皮脂溢出过多的基础上发生的一种脱发，常伴有头屑增多，头皮油腻，痛痒明显。多发生于皮脂腺分泌旺盛的青壮年，头发细软，有的伴有头皮脂溢性皮炎，开始逐渐自头顶部开始脱发，蔓延及额部。头皮油腻而亮红，结黄色油性痂。溢脂性脱发的治疗须首先注重头发的保健护理…</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-      <div class="tf-title2"></div>
-      <div class="tf-anlilist">
-        <ul>
-          <li><img src="/static/tuofa/anli1.jpg" alt="植发"></li>
-          <li><img src="/static/tuofa/anli2.jpg" alt="植发"></li>
-          <li><img src="/static/tuofa/anli3.jpg" alt="植发"></li>
-          <li><img src="/static/tuofa/anli4.jpg" alt="植发"></li>
+        <ul class="tf-row">
+          <li>
+            <img src="/static/tuofa/tf-yy09.jpg" alt="详细咨询"></li>
+          <li>
+            <img src="/static/tuofa/tf-yy08.jpg" alt="毛发检测"></li>
+          <li>
+            <img src="/static/tuofa/tf-yy07.jpg" alt="手术预约"></li>
+          <li>
+            <img src="/static/tuofa/tf-yy06.jpg" alt="终身服务"></li>
+          <li>
+            <img src="/static/tuofa/tf-yy10.jpg" alt="专业护理"></li>
+          <li class="prom-bl">
+            <img src="/static/tuofa/tf-yy12.jpg" alt="脱发"></li>
         </ul>
       </div>
     </div>
-    <div class="container chengxian">
-      <img src="/static/tuofa/plist.jpg" alt="植发">
+    <div class="tf-zxbtn">
+      <a target="_blank" onclick="openZoosUrl();return false" href="javascript:void(0)" class="btn btn-lg btn-warning">点击按钮，赶快治疗脱发</a>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="btn-group btn-group-sm btn-group-justified" role="tablist">
-                    <a href="#about" role="tab" data-toggle="tab" class="btn btn-default">医院简介</a>
-                    <a href="#team" role="tab" data-toggle="tab" class="btn btn-default">植发团队</a>
-                    <a href="#evn" role="tab" data-toggle="tab" class="btn btn-default">医院环境</a>
-                </div>
-
-                <!-- Tab panes -->
-                <div class="tab-content tab-acon">
-                  <div role="tabpanel" class="tab-pane active tab-ab" id="about">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h3 class="about-i-title">
-                                关于新发现<br><span>About XFX</span>
-                            </h3>
-                            <div class="about-i-p">
-                                <p>新发现植发始于1999年，是国内最早开展毛发移植的权威机构之一，专业从事毛发研究和种植的特色诊疗机构。2011年实现连锁品牌升级，总部设在广州，逐步在全国范围内开设直营植发机构。天津新发现中心品牌升级，成立天津新发现植发专科门诊部。</p>
-                                <p>作为国际植发协会（ISHRS）会员，新发现植发中心以精湛的技术和高尚的医德在广大患者中树立起良好的口碑，在中国引领了国家毛发移植的潮流，技术水平、服务体系和国际同步。自成立以来，已为众多的脱发、缺发朋友解决了“无发”、“无眉”的困扰，多年来成功为一些国家领导人、影视界明星、国际友人等各界人士从根本上解决了秃顶、假发、生发无效的烦恼，其精湛的技艺已经获得全球行业的认同。</p>
-                                <p>新发现植发中心国内最早采用世界领先的高精细毛囊移植技术的机构，真正做到了种植头发的高成活率、高密度、高自然度，更加适合东方人的特点，该手术广泛运用于头发、眉毛、睫毛、胡须、体毛等移植，手术效果真实自然，堪称完美，受到欧亚植发专家及患者的一致好评和推崇。</p>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 tf-about-head">
-                          <img src="/static/tuofa/about-head.jpg" alt="植发">
-                        </div>
-                    </div>
-                  </div>
-                  <div role="tabpanel" class="tab-pane tab-ab" id="team">
-                    <img src="/static/tuofa/tabt1.jpg" alt="植发">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                          <img src="/static/tuofa/exp1.jpg" alt="植发">
-                        </div>
-                        <div class="item">
-                          <img src="/static/tuofa/exp2.jpg" alt="植发">
-                        </div>
-                        <div class="item">
-                          <img src="/static/tuofa/exp3.jpg" alt="植发">
-                        </div>
-                        <div class="item">
-                          <img src="/static/tuofa/exp4.jpg" alt="植发">
-                        </div>
-                        <div class="item">
-                          <img src="/static/tuofa/exp5.jpg" alt="植发">
-                        </div>
-                        <div class="item">
-                          <img src="/static/tuofa/exp6.jpg" alt="植发">
-                        </div>
-                      </div>
-
-                      <!-- Controls -->
-                      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <!-- <span class="sr-only">Next</span> -->
-                      </a>
-                    </div>
-                    <p>新发现植发由中国毛发移植创始人吴安利女士创立。15年来，先后与南方医科大学等高校结成人才培训联盟，为国内植发行业培养了大批的植发人才。</p>
-                  </div>
-                  <div role="tabpanel" class="tab-pane tab-ab" id="evn">
-                    <img src="/static/tuofa/tabt2.jpg" alt="植发">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                          <img src="/static/tuofa/evn1.jpg" alt="植发">
-                        </div>
-                        <div class="item">
-                          <img src="/static/tuofa/evn2.jpg" alt="植发">
-                        </div>
-                        <div class="item">
-                          <img src="/static/tuofa/evn3.jpg" alt="植发">
-                        </div>
-                        <div class="item">
-                          <img src="/static/tuofa/evn4.jpg" alt="植发">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {dede:include filename="footer.htm"/}
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/Swiper/3.1.0/js/swiper.jquery.min.js"></script>
-    <script src="/static/js/main.min.js"></script>
-    <script>
-        $('#myTab a').click(function (e) {
-          e.preventDefault()
-          $(this).tab('show')
-        })
-    </script>
-  </body>
+  </div>
+  {dede:include filename="footer.htm"/}
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/static/js/main.min.js"></script>
+</body>
 </html>
