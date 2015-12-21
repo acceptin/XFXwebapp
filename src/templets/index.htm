@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-transform" />
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="renderer" content="webkit">
     <meta name="description" content="{dede:global.cfg_description/}" />
@@ -26,7 +28,6 @@
             <div class="swiper-slide banner-slide"><a href="/about/"><img src="/static/img/2015081802.jpg"></a></div>
             <div class="swiper-slide banner-slide"><a href="/anli/"><img src="/static/img/2015081801.jpg"></a></div>
             <div class="swiper-slide banner-slide"><a  target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/home-ban03.jpg"></a></div>
-            <div class="swiper-slide banner-slide"><a target="_blank" onclick="openZoosUrl();return false;" href="javascript:void(0)"><img src="/static/img/home-ban04.jpg"></a></div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination banner-pagination"></div>
@@ -87,7 +88,93 @@
         </div>
       </div>
     </div> <!-- /container -->
-    
+    <aside>
+      <div class="full-screen ad public-ad home-ad">
+        <div class="alert alert-dismissible fade in" role="alert">
+          <a target="_blank" onclick="openZoosUrl();return false;" href="javascript:;" class="btn btn-default btn-sm">立即咨询</a>
+          {dede:myad name='ad0'/}
+        </div>
+      </div>
+    </aside>
+    <div class="full-screen home-list">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                植发价格相关问题
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="list-group">
+              <a class="list-group-item" href="/article/art01.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                植发的价格大概是多少？
+              </a>
+              <a class="list-group-item" href="/article/77.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                植发的价格怎么计算？
+              </a>
+              <a class="list-group-item" href="article/art03.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                植发的价格贵不贵？
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                脱发原因及治疗相关问题
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="list-group">
+              <a class="list-group-item" href="/article/art06.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                头发脱落是什么原因？
+              </a>
+              <a class="list-group-item" href="/article/art05.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                最近严重掉头发怎么回事？
+              </a>
+              <a class="list-group-item" href="/article/art04.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                经常掉头发怎么办？
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                植发效果相关问题
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="list-group">
+              <a class="list-group-item" href="/article/art11.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                植发效果如何？
+              </a>
+              <a class="list-group-item" href="/article/art10.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                植发的效果能够维持多久？
+              </a>
+              <a class="list-group-item" href="/article/art09.html">
+                <span class="badge"><i class="fa fa-arrow-right"></i></span>
+                植发多久才能看到效果？
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     {dede:include filename="footer.htm"/}
     <!-- Include all compiled plugins (below), or include individual files as needed -->
   </body>
